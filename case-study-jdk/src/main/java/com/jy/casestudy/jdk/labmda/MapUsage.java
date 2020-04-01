@@ -1,4 +1,4 @@
-package com.jy.util.casestudy.common.labmda;
+package com.jy.casestudy.jdk.labmda;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,18 +19,17 @@ public class MapUsage {
             .collect(Collectors.toList());
         System.out.println(dogList);
     }
-}
 
-class Dog {
-
-    private String name;
-
-    Dog(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "dog: " + name;
+    private static class Dog {
+        private String name;
+        Dog(String name) {
+            this.name = name;
+        }
+        @Override
+        public String toString() {
+            return "dog: " + name;
+        }
     }
 }
+
+

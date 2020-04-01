@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class SelectionSort {
 
 
-    public static void sortMaxHead(int[] arr) {
+    private static void sortMaxHead(int[] arr) {
         if (arr != null && arr.length > 1) {
             for (int i = 0; i < arr.length - 1; i++) {
                 for (int k = i + 1; k < arr.length; k++) {
@@ -27,7 +27,7 @@ public class SelectionSort {
         }
     }
 
-    public static void sortSmallHead(int[] arr) {
+    private static void sortSmallHead(int[] arr) {
         if (arr != null && arr.length > 1) {
             for (int i = 0; i < arr.length - 1; i++) {
                 for (int k = i + 1; k < arr.length; k++) {

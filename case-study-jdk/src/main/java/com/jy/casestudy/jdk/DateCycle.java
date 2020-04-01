@@ -1,4 +1,4 @@
-package com.jy.util.casestudy.common;
+package com.jy.casestudy.jdk;
 
 
 import cn.t.util.common.DateUtil;

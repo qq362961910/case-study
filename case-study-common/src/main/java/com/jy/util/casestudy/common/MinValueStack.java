@@ -19,7 +19,7 @@ public class MinValueStack {
     //按从大到小的顺序排列
     private List<Integer> mins = new ArrayList<>();
 
-    public static void main(String[] args) throws Exception {
+    private static void main(String[] args) throws Exception {
 
         int[] numbers = new int[7];
         for (int i = 0; i < numbers.length; i++) {
@@ -27,8 +27,8 @@ public class MinValueStack {
         }
 
         MinValueStack minValueStack = new MinValueStack();
-        for (int i = 0; i < numbers.length; i++) {
-            minValueStack.push(numbers[i]);
+        for (int number : numbers) {
+            minValueStack.push(number);
         }
 
         logger.info("values: {}", minValueStack.data);
@@ -41,7 +41,7 @@ public class MinValueStack {
         }
     }
 
-    public void push(int num) throws Exception {
+    private void push(int num) throws Exception {
         data.add(num);
         if (mins.size() == 0) {
             // 初始化mins
@@ -55,7 +55,7 @@ public class MinValueStack {
         }
     }
 
-    public int pop() throws Exception {
+    private int pop() throws Exception {
         // 栈空，抛出异常
         if (data.size() == 0) {
             throw new Exception("stack is empty");
@@ -71,7 +71,7 @@ public class MinValueStack {
         return data.remove(data.size() - 1);
     }
 
-    public int getMin() throws Exception {
+    private int getMin() throws Exception {
         // 栈空，抛出异常
         if (data.size() == 0) {
             throw new Exception("stack is empty");

@@ -1,4 +1,4 @@
-package com.jy.util.casestudy.common.labmda;
+package com.jy.casestudy.jdk.labmda;
 
 import java.util.*;
 import java.util.stream.Collectors;
