@@ -1,4 +1,4 @@
-package com.jy.casestudy.datastructure;
+package com.jy.casestudy.algorithm;
 
 /**
  * 数二进制当中包含多少个1

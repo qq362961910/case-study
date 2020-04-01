@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>case-study-data-structure</artifactId>
+    <artifactId>case-study-algorithm</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -17,7 +17,10 @@
             <groupId>cn.t</groupId>
             <artifactId>common-util</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.2-jre</version>
+        </dependency>
     </dependencies>
-
-
 </project>

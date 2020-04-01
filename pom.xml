@@ -12,6 +12,7 @@
         <module>case-study-redis</module>
         <module>case-study-jdk</module>
         <module>case-study-data-structure</module>
+        <module>case-study-algorithm</module>
     </modules>
 
     <properties>

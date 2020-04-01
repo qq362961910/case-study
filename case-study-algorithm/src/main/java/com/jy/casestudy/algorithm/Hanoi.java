@@ -1,4 +1,4 @@
-package com.jy.casestudy.datastructure;
+package com.jy.casestudy.algorithm;
 
 /**
  * 汉娜塔
