@@ -32,7 +32,7 @@ public class Fibonacci {
      * @param n xxx
      * @return xxx
      */
-    public static int forwardPassImplementation(int n) {
+    private static int forwardPassImplementation(int n) {
         int pre = 0;
         int next = 1;
         if (n == 0) {
@@ -55,7 +55,7 @@ public class Fibonacci {
      * @param n xxx
      * @return xxx
      */
-    public static int recursionImplementation(int n) {
+    private static int recursionImplementation(int n) {
         if (n == 0) {
             return 0;
         }
@@ -70,7 +70,7 @@ public class Fibonacci {
      * @param n xxx
      * @return xxx
      */
-    public static long generalTermFormulaImplementation(int n) {
+    private static long generalTermFormulaImplementation(int n) {
         return Math.round(Math.pow(((1 + Math.sqrt(5)) / 2.0), n) / Math.sqrt(5) - Math.pow(((1 - Math.sqrt(5)) / 2.0), n) / Math.sqrt(5));
     }
 
@@ -79,5 +79,8 @@ public class Fibonacci {
      * 矩阵斐波那契实现
      * "https://www.cnblogs.com/huxianglin/p/5995649.html"
      * */
+    public void what() {
+        //....
+    }
 
 }
