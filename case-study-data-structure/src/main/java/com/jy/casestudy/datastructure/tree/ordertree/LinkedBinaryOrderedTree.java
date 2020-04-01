@@ -1,9 +1,9 @@
-package cn.t.util.casestudy.tree.ordertree;
+package com.jy.casestudy.datastructure.tree.ordertree;
 
 /**
- * @description: 二叉搜索树
+ * 二叉搜索树
  * create: 2019-09-10 21:29
- * @author: yj
+ * @author yj
  **/
 public class LinkedBinaryOrderedTree<T> {
 
@@ -28,9 +28,9 @@ public class LinkedBinaryOrderedTree<T> {
     }
 
     /**
-     * @description: 查找一个节点
+     * 查找一个节点
      * create time: 9/10/19
-     * @author:   yj
+     * @author   yj
      * @param key ID值
      */
     public LinkedBinaryOrderedTreeNode<T> findByKey(int key) {
@@ -48,9 +48,9 @@ public class LinkedBinaryOrderedTree<T> {
     }
 
     /**
-     * @description: 插入节点
+     * 插入节点
      * create time: 9/11/19
-     * @author:   yj
+     * @author   yj
      * @param key ID值
      * @param data 数据
      */

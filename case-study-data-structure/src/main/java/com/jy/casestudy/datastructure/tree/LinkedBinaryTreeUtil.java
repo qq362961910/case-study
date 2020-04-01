@@ -1,8 +1,8 @@
-package cn.t.util.casestudy.tree;
+package com.jy.casestudy.datastructure.tree;
 
-import cn.t.util.casestudy.tree.ordertree.LinkedBinaryOrderedTreeNode;
 import cn.t.util.common.ArrayUtil;
 import cn.t.util.common.CollectionUtil;
+import com.jy.casestudy.datastructure.tree.ordertree.LinkedBinaryOrderedTreeNode;
 
 import java.util.*;
 
@@ -88,9 +88,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 计算树中节点个数
+     * 计算树中节点个数
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> int countTreeNodes(LinkedBinaryTreeNode<T> root) {
@@ -101,9 +101,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 计算树的深度
+     * 计算树的深度
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> int treeDepth(LinkedBinaryTreeNode<T> root) {
@@ -115,9 +115,9 @@ public class LinkedBinaryTreeUtil {
 
 
     /**
-     * @description: 前序遍历
+     * 前序遍历
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> void prevOrderForeach(LinkedBinaryTreeNode<T> root) {
@@ -130,9 +130,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 中序遍历
+     * 中序遍历
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> void middleOrderForeach(LinkedBinaryTreeNode<T> root) {
@@ -144,9 +144,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 后序遍历
+     * 后序遍历
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> void backOrderForeach(LinkedBinaryTreeNode<T> root) {
@@ -159,9 +159,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 分层遍历
+     * 分层遍历
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> void layerForeach(LinkedBinaryTreeNode<T> root) {
@@ -182,9 +182,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 访问node节点
+     * 访问node节点
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param node 节点
      */
     private static <T> void visitNode(LinkedBinaryTreeNode<T> node) {
@@ -192,9 +192,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: default
+     * default
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      * @param layer 树的深度
      */
@@ -211,9 +211,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 求二叉树中叶子节点的个数
+     * 求二叉树中叶子节点的个数
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> int countLeaf(LinkedBinaryTreeNode<T> root) {
@@ -229,9 +229,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: default
+     * default
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      */
     public static <T> void exchange(LinkedBinaryTreeNode<T> root) {
@@ -245,9 +245,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 查看node是否是root的子节点
+     * 查看node是否是root的子节点
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      * @param node 子节点
      */
@@ -267,9 +267,9 @@ public class LinkedBinaryTreeUtil {
 
 
     /**
-     * @description: default
+     * default
      * create time: 9/9/19
-     * @author:   yj
+     * @author  yj
      * @param root 根节点
      * @param firstNode 子节点1
      * @param secondNode 子节点2
@@ -298,9 +298,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 根据前序和中序构建二叉树
+     * 根据前序和中序构建二叉树
      * create time: 9/10/19
-     * @author:   yj
+     * @author  yj
      * @param pre 前序序列
      * @param mid 中序序列
      */
@@ -343,9 +343,9 @@ public class LinkedBinaryTreeUtil {
     }
 
     /**
-     * @description: 查看两棵树是否相等(两棵树所有节点都相等)
+     * 查看两棵树是否相等(两棵树所有节点都相等)
      * create time: 9/10/19
-     * @author:   yj
+     * @author  yj
      * @param tree1 树1
      * @param tree2 树2
      */

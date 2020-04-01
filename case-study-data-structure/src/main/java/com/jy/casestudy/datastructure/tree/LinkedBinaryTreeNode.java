@@ -1,4 +1,4 @@
-package cn.t.util.casestudy.tree;
+package com.jy.casestudy.datastructure.tree;
 
 import java.util.Objects;
 

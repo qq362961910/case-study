@@ -1,6 +1,6 @@
-package cn.t.util.casestudy.tree.ordertree;
+package com.jy.casestudy.datastructure.tree.ordertree;
 
-import cn.t.util.casestudy.tree.LinkedBinaryTreeNode;
+import com.jy.casestudy.datastructure.tree.LinkedBinaryTreeNode;
 
 /**
  * @description: 二叉搜索树节点
