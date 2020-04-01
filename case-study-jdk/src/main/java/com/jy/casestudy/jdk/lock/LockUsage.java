@@ -1,4 +1,4 @@
-package com.jy.casestudy.jdk;
+package com.jy.casestudy.jdk.lock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 

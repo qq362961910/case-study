@@ -1,4 +1,4 @@
-package com.jy.util.casestudy.common;
+package com.jy.casestudy.datastructure;
 
 
 import cn.t.util.common.Assert;

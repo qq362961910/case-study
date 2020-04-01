@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>case-study-common</module>
         <module>case-study-redis</module>
         <module>case-study-jdk</module>
+        <module>case-study-data-structure</module>
     </modules>
 
     <properties>
