@@ -13,6 +13,7 @@
         <module>case-study-jdk</module>
         <module>case-study-data-structure</module>
         <module>case-study-algorithm</module>
+        <module>case-study-mapstruct</module>
     </modules>
 
     <properties>
