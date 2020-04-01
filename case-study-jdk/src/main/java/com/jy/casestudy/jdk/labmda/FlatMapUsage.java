@@ -3,7 +3,7 @@ package com.jy.casestudy.jdk.labmda;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class flatMapUsage {
+public class FlatMapUsage {
     public static void main(String[] args) {
         List<List<String>> list = Arrays.asList(
             Arrays.asList("a","b", "c"),
