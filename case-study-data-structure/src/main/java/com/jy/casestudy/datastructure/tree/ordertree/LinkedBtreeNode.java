@@ -1,16 +1,19 @@
-package cn.t.util.casestudy.tree.ordertree;
+package com.jy.casestudy.datastructure.tree.ordertree;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
- * @description: B tree node
+ *  B tree node
  * create: 2019-09-16 14:03
- * @author: yj
+ * @author yj
  **/
-public class LinkedBtreeNode<K extends Comparable, V> {
+public class LinkedBtreeNode<K extends Comparable<K>, V> {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkedBtreeNode.class);
 

@@ -15,6 +15,7 @@
         <module>case-study-algorithm</module>
         <module>case-study-mapstruct</module>
         <module>case-study-reactor</module>
+        <module>case-study-jsch</module>
     </modules>
 
     <properties>
