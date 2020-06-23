@@ -7,7 +7,7 @@ import cn.t.util.common.RandomUtil;
  * 最小堆
  * 1.完全二叉树
  * 2.根结点为最小值
- * 3.任意节点的父节点的值都小于或者等于其左节点的值
+ * 3.任意节点的父节点的值都小于或者等于其左右节点的值
  * */
 public class BinaryMinimumHeap {
 
@@ -46,6 +46,7 @@ public class BinaryMinimumHeap {
      */
 
     public static void buildHeap(int[] array) {
+        // 完全二叉树节点数量 = 2^N(N为输的高度) - 1
         // 从最后一个非叶子节点开始，依次下沉调整
         for (int i = array.length / 2; i >= 0; i--) {
             downAdjust(array, i, array.length - 1);

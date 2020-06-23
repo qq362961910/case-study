@@ -1,4 +1,4 @@
-package cn.t.util.casestudy.tree;
+package com.jy.casestudy.datastructure.tree;
 
 import cn.t.util.common.ArrayUtil;
 import cn.t.util.common.math.LogarithmUtil;
@@ -20,9 +20,9 @@ public class ArrayBinaryTreeUtil {
     }
 
     /**
-     * @description: 是否为完全二叉树
+     * 是否为完全二叉树
      * create time: 9/10/19
-     * @author:   yj
+     * @author   yj
      * @param binaryTree 树
      * @param depth depth
      */
@@ -31,9 +31,9 @@ public class ArrayBinaryTreeUtil {
     }
 
     /**
-     * @description: 计算完全二叉树父节点下标
+     * 计算完全二叉树父节点下标
      * create time: 9/10/19
-     * @author:   yj
+     * @author   yj
      * @param arr 二叉树
      * @param index 子节点
      */
@@ -46,9 +46,9 @@ public class ArrayBinaryTreeUtil {
     }
 
     /**
-     * @description: 判断是否拥有左子节点
+     * 判断是否拥有左子节点
      * create time: 9/10/19
-     * @author:   yj
+     * @author   yj
      * @param arr 二叉树
      * @param index 父节点
      */
@@ -57,9 +57,9 @@ public class ArrayBinaryTreeUtil {
     }
 
     /**
-     * @description: 判断是否拥有右子节点
+     * 判断是否拥有右子节点
      * create time: 9/10/19
-     * @author:   yj
+     * @author   yj
      * @param arr 二叉树
      * @param index 父节点
      */
