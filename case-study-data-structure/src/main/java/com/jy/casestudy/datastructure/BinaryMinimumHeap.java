@@ -4,6 +4,8 @@ package com.jy.casestudy.datastructure;
 import cn.t.util.common.PrintUtil;
 import cn.t.util.common.RandomUtil;
 
+import java.util.Arrays;
+
 /**
  * 最小堆
  * 1.完全二叉树
@@ -24,7 +26,7 @@ public class BinaryMinimumHeap {
         int temp = array[parentIndex];
         int childIndex = 2 * parentIndex + 1;
         while (childIndex < length) {
-            // 如果有右孩子，且右孩子小于左孩子的值，则定位到右孩子
+            // 如果有右子节点，且右孩子小于左子节点的值，则定位到右子节点
             if (childIndex + 1 < length && array[childIndex + 1] < array[childIndex]) {
                 childIndex++;
             }
@@ -32,8 +34,9 @@ public class BinaryMinimumHeap {
             if (temp <= array[childIndex]) {
                 break;
             }
-            //无需真正交换，单向赋值即可
+            //无需真正交换，单向赋值即可, temp存储的是正在被交换的较大的值
             array[parentIndex] = array[childIndex];
+            //被移动的子节点重新排序父节点
             parentIndex = childIndex;
             childIndex = 2 * childIndex + 1;
         }
@@ -71,10 +74,19 @@ public class BinaryMinimumHeap {
     public static void main(String[] args) {
         int[] arr = new int[63];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = RandomUtil.randomInt(0, 10);
+            arr[i] = RandomUtil.randomInt(10, 99);
         }
+        //打印原始的数组
+        int [] tempArr = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(tempArr);
+        System.out.println(Arrays.toString(tempArr));
+        System.out.println("====================================================================================================");
         buildHeap(arr);
         PrintUtil.printBinaryTree(arr);
+        System.out.println("====================================================================================================");
+        //打印整理后的数组
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 
