@@ -15,42 +15,44 @@ public class MinValueStack {
 
     private static final Logger logger = LoggerFactory.getLogger(MinValueStack.class);
 
-    private List<Integer> data = new ArrayList<>();
-    //按从大到小的顺序排列
-    private List<Integer> mins = new ArrayList<>();
+    //存放所有值
+    private final List<Integer> data = new ArrayList<>();
+    //按从大到小的顺序排列存放值下标
+    private final List<Integer> minIndexList = new ArrayList<>();
 
-    private static void main(String[] args) throws Exception {
-
-        int[] numbers = new int[7];
+    public static void main(String[] args) throws Exception {
+        //随机产生一批数字
+        int[] numbers = new int[20];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = RandomUtil.randomInt(0, 100);
         }
 
+        //压数据进栈
         MinValueStack minValueStack = new MinValueStack();
         for (int number : numbers) {
             minValueStack.push(number);
         }
 
         logger.info("values: {}", minValueStack.data);
-        logger.info("mins: {}", minValueStack.mins);
+        logger.info("minIndexList: {}", minValueStack.minIndexList);
 
         for (int i = 0; i < numbers.length; i++) {
             minValueStack.pop();
             logger.info("values: {}", minValueStack.data);
-            logger.info("mins: {}", minValueStack.mins);
+            logger.info("minIndexList: {}", minValueStack.minIndexList);
         }
     }
 
     private void push(int num) throws Exception {
         data.add(num);
-        if (mins.size() == 0) {
-            // 初始化mins
-            mins.add(0);
+        if (minIndexList.size() == 0) {
+            // 初始化minIndexList
+            minIndexList.add(0);
         } else {
-            // 辅助栈mins push最小值的索引
+            // 辅助栈minIndexList push最小值的索引
             int min = getMin();
             if (num < min) {
-                mins.add(data.size() - 1);
+                minIndexList.add(data.size() - 1);
             }
         }
     }
@@ -62,11 +64,11 @@ public class MinValueStack {
         }
         // pop时先获取索引
         int popIndex = data.size() - 1;
-        // 获取mins栈顶元素，它是最小值索引
-        int minIndex = mins.get(mins.size() - 1);
-        // 如果pop出去的索引就是最小值索引，mins才出栈
+        // 获取minIndexList栈顶元素，它是最小值索引
+        int minIndex = minIndexList.get(minIndexList.size() - 1);
+        // 如果pop出去的索引就是最小值索引，minIndexList才出栈
         if (popIndex == minIndex) {
-            mins.remove(mins.size() - 1);
+            minIndexList.remove(minIndexList.size() - 1);
         }
         return data.remove(data.size() - 1);
     }
@@ -76,8 +78,8 @@ public class MinValueStack {
         if (data.size() == 0) {
             throw new Exception("stack is empty");
         }
-        // 获取mins栈顶元素，它是最小值索引
-        int minIndex = mins.get(mins.size() - 1);
+        // 获取minIndexList栈顶元素，它是最小值索引
+        int minIndex = minIndexList.get(minIndexList.size() - 1);
         return data.get(minIndex);
     }
 }
