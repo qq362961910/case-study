@@ -19,7 +19,7 @@ public class BinaryMinimumHeap {
      *
      * @param array       待调整的堆
      * @param parentIndex 要下沉的父节点
-     * @param length      堆的有效大小
+     * @param length   有效长度
      */
     public static void downAdjust(int[] array, int parentIndex, int length) {
         // temp保存父节点值，用于最后的赋值
@@ -41,6 +41,25 @@ public class BinaryMinimumHeap {
             childIndex = 2 * childIndex + 1;
         }
         array[parentIndex] = temp;
+    }
+    public static void downAdjustRecursive(int[] array, int parentIndex, int length) {
+        int childIndex = 2 * parentIndex + 1;
+        if(childIndex >= length) {
+            return;
+        }
+        int nextIndex = childIndex + 1;
+        if(nextIndex < length && array[nextIndex] < array[childIndex]) {
+            childIndex = nextIndex;
+        }
+        if(array[parentIndex] < array[childIndex]) {
+            return;
+        }
+        //值互换, 递归被替换的子节点
+        array[parentIndex] ^= array[childIndex];
+        array[childIndex] ^= array[parentIndex];
+        array[parentIndex] ^= array[childIndex];
+
+        downAdjustRecursive(array, childIndex, length);
     }
 
     /**
@@ -67,17 +86,20 @@ public class BinaryMinimumHeap {
         // 由于整数除法计算的特性，可以看出【左子节点的计算适用于右子节点】
         // 从最后一个非叶子节点开始，依次下沉调整
         for (int i = ((array.length-2) / 2); i >= 0; i--) {
-            downAdjust(array, i, array.length);
+//            downAdjust(array, i, array.length);
+            downAdjustRecursive(array, i, array.length);
         }
     }
 
     public static void main(String[] args) {
         int[] arr = new int[63];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = RandomUtil.randomInt(10, 99);
+            arr[i] = RandomUtil.randomInt(0, 9);
         }
+        System.out.println(Arrays.toString(arr));
+//        int[] arr = IntUtil.stringsToInts("0, 6, 3, 0, 6, 4, 5, 6, 5, 6, 2, 1, 6, 5, 4, 2, 4, 2, 1, 4, 5, 8, 0, 5, 2, 5, 0, 1, 0, 1, 1, 7, 5, 7, 1, 8, 0, 1, 7, 2, 2, 3, 3, 5, 1, 5, 1, 6, 5, 3, 0, 8, 0, 7, 4, 8, 2, 1, 2, 1, 5, 5, 2", ",");
         //打印原始的数组
-        int [] tempArr = Arrays.copyOf(arr, arr.length);
+        int [] tempArr = Arrays.copyOf(arr, arr.length - 1);
         Arrays.sort(tempArr);
         System.out.println(Arrays.toString(tempArr));
         System.out.println("====================================================================================================");
