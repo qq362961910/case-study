@@ -48,9 +48,23 @@ public class BinaryMinimumHeap {
 
     public static void buildHeap(int[] array) {
         // 完全二叉树节点数量 = 2^N(N为输的高度) - 1
+        // 左孩子节点下标: 2 * parentIndex + 1
+        // 右孩子节点下标: 2 * parentIndex + 2
+        // 假设树的深度为6，完全二叉树共63个节点, 压轴节点为61(2 * parentIndex + 1), 最后一个节点的索引为62(2 * parentIndex + 2), 其父节点索引为30
+        // 观察二叉树可以得出结论在节点数量大于1的二叉树中最后一个节点一定是子节点，但不确定是左子节点还是右子节点，首先假设其为左子节点，带入公式
+        // array.length - 1 = 2 * parentIndex + 1
+        // array.length - 1 - 1 = 2 * parentIndex
+        // array.length - 2
+        // ---------------- = parentIndex
+        //         2
+        //假设最后一个节点为右子节点，根据上面计算得出结果:
+        // array.length - 3
+        // ---------------- = parentIndex
+        //         2
+        // 由于整数除法计算的特性，可以看出【左子节点的计算适用于右子节点】
         // 从最后一个非叶子节点开始，依次下沉调整
-        for (int i = array.length / 2; i >= 0; i--) {
-            downAdjust(array, i, array.length - 1);
+        for (int i = ((array.length-2) / 2); i >= 0; i--) {
+            downAdjust(array, i, array.length);
         }
     }
 
