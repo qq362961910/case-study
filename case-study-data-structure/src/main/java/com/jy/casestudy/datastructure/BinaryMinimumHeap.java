@@ -1,6 +1,7 @@
 package com.jy.casestudy.datastructure;
 
 
+import cn.t.util.common.PrintUtil;
 import cn.t.util.common.RandomUtil;
 
 /**
@@ -53,60 +54,13 @@ public class BinaryMinimumHeap {
         }
     }
 
-    /**
-     * 输出二叉树
-     * @param array xxx
-     * @param scale xxx
-     */
-    public static void printHeap(int[] array, int scale) {
-        if (array != null && array.length > 0) {
-            String split = ".";
-            int len = log(array.length + 1, 2);
-            out:
-            for (int i = 0; i < len; i++) {
-                int last = (int) Math.pow(2, i) - 2;
-                //输出数据
-                int total = (int) Math.pow(2, i);
-                for (int j = 1; j <= total; j++) {
-                    for (int k = 0; k < Math.pow(2, len - i) * scale; k++) {
-                        System.out.print(split);
-                    }
-                    if ((last + j) >= array.length) {
-                        break;
-                    }
-                    System.out.print(array[last + j]);
-                    int strLen = String.valueOf(array[last + j]).length();
-                    for (int k = 0; k < (Math.pow(2, len - i) - 1) * scale + (scale - 1) - (strLen - 1); k++) {
-                        System.out.print(split);
-                    }
-                }
-                System.out.println();
-            }
-        }
-    }
-
-    public static void printHeap(int[] array) {
-        printHeap(array, 1);
-    }
-
-    /**
-     * 求指数
-     * @param value xxx
-     * @param base xxx
-     * @return xxx
-     */
-    public static int log(double value, double base) {
-        return (int) Math.ceil(Math.log(value) / Math.log(base));
-    }
-
-
     public static void main(String[] args) {
         int[] arr = new int[63];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = RandomUtil.randomInt(0, 10);
         }
         buildHeap(arr);
-        printHeap(arr);
+        PrintUtil.printBinaryTree(arr);
     }
 
 
