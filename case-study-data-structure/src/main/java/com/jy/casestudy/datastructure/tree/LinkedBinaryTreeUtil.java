@@ -274,7 +274,7 @@ public class LinkedBinaryTreeUtil {
      * @param firstNode 子节点1
      * @param secondNode 子节点2
      */
-    public static <T> LinkedBinaryTreeNode findSameParentNode(LinkedBinaryTreeNode<T> root, LinkedBinaryTreeNode<T> firstNode, LinkedBinaryTreeNode<T> secondNode) {
+    public static <T> LinkedBinaryTreeNode<T> findSameParentNode(LinkedBinaryTreeNode<T> root, LinkedBinaryTreeNode<T> firstNode, LinkedBinaryTreeNode<T> secondNode) {
         if(firstNode == root || secondNode == root) {
             return root;
         }

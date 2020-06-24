@@ -3,9 +3,9 @@ package com.jy.casestudy.datastructure.tree.ordertree;
 import com.jy.casestudy.datastructure.tree.LinkedBinaryTreeNode;
 
 /**
- * @description: 二叉搜索树节点
- * create: 2019-09-10 21:25
- * @author: yj
+ * 二叉搜索树节点
+ * @author yj
+ * @since 2019-09-10 21:25
  **/
 public class LinkedBinaryOrderedTreeNode<T> extends LinkedBinaryTreeNode<T> {
 

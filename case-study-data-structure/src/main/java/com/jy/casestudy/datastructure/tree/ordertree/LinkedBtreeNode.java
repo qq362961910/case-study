@@ -17,7 +17,7 @@ public class LinkedBtreeNode<K extends Comparable<K>, V> {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkedBtreeNode.class);
 
-    private int m;
+    private final int m;
 
     /**
      * 节点数据，按键生序

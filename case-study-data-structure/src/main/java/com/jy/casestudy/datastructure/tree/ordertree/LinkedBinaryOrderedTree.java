@@ -2,8 +2,8 @@ package com.jy.casestudy.datastructure.tree.ordertree;
 
 /**
  * 二叉搜索树
- * create: 2019-09-10 21:29
  * @author yj
+ * @since 2019-09-10 21:29
  **/
 public class LinkedBinaryOrderedTree<T> {
 
