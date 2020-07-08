@@ -6,7 +6,7 @@ package com.jy.casestudy.algorithm;
  * @author yj
  * @since 2020-04-01 19:03
  **/
-public class ExchangeValue {
+public class ExchangeValueCase {
 
     public static void main(String[] args) {
         exchangeM1();

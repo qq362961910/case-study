@@ -3,7 +3,7 @@ package com.jy.casestudy.algorithm;
 /**
  * 数二进制当中包含多少个1
  * */
-public class CountBitOne {
+public class CountBitOneCase {
 
     public static void main(String[] args) {
         //expect count: 20

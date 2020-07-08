@@ -8,7 +8,7 @@ import java.util.*;
  * @author yj
  * @since 2019-12-28 18:59
  **/
-public class ConsistentHash {
+public class ConsistentHashCase {
 
     //物理节点
     private final Set<String> physicalNodes = new TreeSet<>();
@@ -90,7 +90,7 @@ public class ConsistentHash {
     }
 
     public static void main(String[] args) {
-        ConsistentHash ch = new ConsistentHash();
+        ConsistentHashCase ch = new ConsistentHashCase();
         ch.addPhysicalNode("192.168.1.101");
         ch.addPhysicalNode("192.168.1.102");
         ch.addPhysicalNode("192.168.1.103");

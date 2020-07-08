@@ -1,4 +1,4 @@
-package com.jy.casestudy.algorithm;
+package com.jy.casestudy.algorithm.sort;
 
 
 import cn.t.util.common.RandomUtil;
@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 外层循环控制当前排序的索引
  * 内层循环生于的要与外层循环进行对比的数据，判断是否与外层循环索引的数据进行交换
  */
-public class SelectionSort {
+public class SelectionSortCase {
 
 
     private static void sortMaxHead(int[] arr) {

@@ -1,4 +1,4 @@
-package com.jy.casestudy.algorithm;
+package com.jy.casestudy.algorithm.sort;
 
 
 
@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 外层循环控制排序趟数
  * 内层循环控制每一趟排序多少次,把没有排序的从后往前，由大到小排列
  */
-public class BubbleSort {
+public class BubbleSortCase {
 
     private static void sort(int[] arr) {
         if (arr != null && arr.length > 1) {

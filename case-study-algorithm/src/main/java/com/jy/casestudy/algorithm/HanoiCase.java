@@ -3,7 +3,7 @@ package com.jy.casestudy.algorithm;
 /**
  * 汉娜塔
  */
-public class Hanoi {
+public class HanoiCase {
 
     public static void main(String[] args) {
         transfer(5, 'A', 'B', 'C');

@@ -5,7 +5,7 @@ import cn.t.util.common.Assert;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
-public class BloomFilterUsage {
+public class BloomFilterCase {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
         BloomFilter<Integer> filter = BloomFilter.create(Funnels.integerFunnel(), 10000000, 0.01);
