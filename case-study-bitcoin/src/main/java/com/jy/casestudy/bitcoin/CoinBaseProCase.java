@@ -29,7 +29,7 @@ public class CoinBaseProCase {
     public static void main(String[] args) throws IOException, InterruptedException {
 //        httpGetData();
         webSocketGetData();
-        Thread.currentThread().join();
+//        Thread.currentThread().join();
     }
 
     public static void httpGetData() throws IOException {
@@ -54,23 +54,17 @@ public class CoinBaseProCase {
         exchange.connect().blockingAwait();
 
         // Subscribe to live trades update.
-        Disposable subscription1 = exchange.getStreamingMarketDataService()
+        Disposable subscription = exchange.getStreamingMarketDataService()
             .getTrades(CurrencyPair.BTC_USD)
             .subscribe(
                 trade -> logger.info("Trade: {}", trade),
                 throwable -> logger.error("Error in trade subscription", throwable));
 
-        // Subscribe order book data with the reference to the subscription.
-        Disposable subscription2 = exchange.getStreamingMarketDataService()
-            .getOrderBook(CurrencyPair.BTC_USD)
-            .subscribe(orderBook -> logger.info("Order book: {}", orderBook));
-
         // Wait for a while to see some results arrive
-        Thread.sleep(20000);
+        Thread.sleep(200000000);
 
         // Unsubscribe
-        subscription1.dispose();
-        subscription2.dispose();
+        subscription.dispose();
 
         // Disconnect from exchange (blocking again)
         exchange.disconnect().blockingAwait();

@@ -1,5 +1,9 @@
 package com.jy.casestudy.bitcoin.coinbase;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Arrays;
+
 /**
  * @author <a href="mailto:jian.yang@xman.com">研发部-用户中心组-杨建</a>
  * @version V1.0
@@ -7,17 +11,17 @@ package com.jy.casestudy.bitcoin.coinbase;
  **/
 public class CoinBaseWebSocketSubscriptionMessage {
 
-    private String type = "subscribe";
-    private Channel[] channels;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("channels")
+    private String[] channels;
+    @JsonProperty("product_ids")
+    private String[] productIds;
 
-    public CoinBaseWebSocketSubscriptionMessage(String... channelStrings) {
-        if(channelStrings != null && channelStrings.length > 0) {
-            Channel[] channels = new Channel[channelStrings.length];
-            for(int i=0; i<channelStrings.length; i++) {
-                channels[i] = new Channel(channelStrings[i]);
-            }
-            this.channels = channels;
-        }
+    public CoinBaseWebSocketSubscriptionMessage(String type, String[] channels, String[] productIds) {
+        this.type = type;
+        this.channels = channels;
+        this.productIds = productIds;
     }
 
     public String getType() {
@@ -28,28 +32,28 @@ public class CoinBaseWebSocketSubscriptionMessage {
         this.type = type;
     }
 
-    public Channel[] getChannels() {
+    public String[] getChannels() {
         return channels;
     }
 
-    public void setChannels(Channel[] channels) {
+    public void setChannels(String[] channels) {
         this.channels = channels;
     }
 
-    public static class Channel {
+    public String[] getProductIds() {
+        return productIds;
+    }
 
-        private String name;
+    public void setProductIds(String[] productIds) {
+        this.productIds = productIds;
+    }
 
-        public Channel(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
+    @Override
+    public String toString() {
+        return "CoinBaseWebSocketSubscriptionMessage{" +
+            "type='" + type + '\'' +
+            ", channels=" + Arrays.toString(channels) +
+            ", productIds=" + Arrays.toString(productIds) +
+            '}';
     }
 }

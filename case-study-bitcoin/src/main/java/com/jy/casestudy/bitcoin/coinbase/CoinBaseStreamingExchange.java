@@ -17,8 +17,8 @@ import static info.bitrich.xchangestream.service.ConnectableService.BEFORE_CONNE
  **/
 public class CoinBaseStreamingExchange extends BitstampExchange implements StreamingExchange {
 
-//    private static final String API_URI = "wss://ws-feed.pro.coinbase.com";
-    private static final String API_URI = "wss://ws-feed-public.sandbox.pro.coinbase.com";
+    private static final String API_URI = "wss://ws-feed.pro.coinbase.com";
+//    private static final String API_URI = "wss://ws-feed-public.sandbox.pro.coinbase.com";
 
     private final CoinBaseStreamingService streamingService;
     private CoinBaseStreamingMarketDataService streamingMarketDataService;
