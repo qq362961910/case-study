@@ -8,6 +8,8 @@ import io.reactivex.Observable;
 import org.knowm.xchange.ExchangeSpecification;
 import org.knowm.xchange.bitstamp.BitstampExchange;
 
+import static info.bitrich.xchangestream.service.ConnectableService.BEFORE_CONNECTION_HANDLER;
+
 /**
  * @author <a href="mailto:jian.yang@xman.com">研发部-用户中心组-杨建</a>
  * @version V1.0
@@ -28,6 +30,10 @@ public class CoinBaseStreamingExchange extends BitstampExchange implements Strea
     @Override
     protected void initServices() {
         super.initServices();
+        streamingService.setBeforeConnectionHandler(
+            (Runnable)
+                getExchangeSpecification()
+                    .getExchangeSpecificParametersItem(BEFORE_CONNECTION_HANDLER));
         streamingMarketDataService = new CoinBaseStreamingMarketDataService(streamingService);
     }
 

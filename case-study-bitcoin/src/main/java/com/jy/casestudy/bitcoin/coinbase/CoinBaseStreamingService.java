@@ -89,8 +89,7 @@ public class CoinBaseStreamingService extends JsonNettyStreamingService {
 
     @Override
     public String getSubscribeMessage(String channelName, Object... args) throws IOException {
-        BitstampWebSocketSubscriptionMessage subscribeMessage =
-            generateSubscribeMessage(channelName, "bts:subscribe");
+        CoinBaseWebSocketSubscriptionMessage subscribeMessage = new CoinBaseWebSocketSubscriptionMessage(channelName);
         return objectMapper.writeValueAsString(subscribeMessage);
     }
 

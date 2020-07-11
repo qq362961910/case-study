@@ -59,10 +59,8 @@ public class CoinBaseStreamingMarketDataService implements StreamingMarketDataSe
 
     @Override
     public Observable<Trade> getTrades(CurrencyPair currencyPair, Object... args) {
-        String channelName = "live_trades" + getChannelPostfix(currencyPair);
-
         return service
-            .subscribeChannel(channelName, BitstampStreamingService.EVENT_TRADE)
+            .subscribeChannel("full")
             .map(
                 s -> {
                     ObjectMapper mapper = StreamingObjectMapperHelper.getObjectMapper();
