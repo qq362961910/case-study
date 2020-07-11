@@ -16,6 +16,7 @@
         <module>case-study-mapstruct</module>
         <module>case-study-reactor</module>
         <module>case-study-jsch</module>
+        <module>case-study-bitcoin</module>
     </modules>
 
     <properties>
@@ -55,6 +56,17 @@
     </dependencyManagement>
 
     <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>nexus-aliyun</name>
+            <url>https://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>central</id>
             <name>central</name>
