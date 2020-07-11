@@ -27,9 +27,8 @@ public class CoinBaseProCase {
     private static final Logger logger = LoggerFactory.getLogger(CoinBaseProCase.class);
 
     public static void main(String[] args) throws IOException, InterruptedException {
-//        httpGetData();
+        httpGetData();
         webSocketGetData();
-//        Thread.currentThread().join();
     }
 
     public static void httpGetData() throws IOException {

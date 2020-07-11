@@ -6,7 +6,7 @@ import info.bitrich.xchangestream.core.StreamingMarketDataService;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
 import org.knowm.xchange.ExchangeSpecification;
-import org.knowm.xchange.bitstamp.BitstampExchange;
+import org.knowm.xchange.coinbasepro.CoinbaseProExchange;
 
 import static info.bitrich.xchangestream.service.ConnectableService.BEFORE_CONNECTION_HANDLER;
 
@@ -15,7 +15,7 @@ import static info.bitrich.xchangestream.service.ConnectableService.BEFORE_CONNE
  * @version V1.0
  * @since 2020-07-11 12:20
  **/
-public class CoinBaseStreamingExchange extends BitstampExchange implements StreamingExchange {
+public class CoinBaseStreamingExchange extends CoinbaseProExchange implements StreamingExchange {
 
     private static final String API_URI = "wss://ws-feed.pro.coinbase.com";
 //    private static final String API_URI = "wss://ws-feed-public.sandbox.pro.coinbase.com";
@@ -66,7 +66,6 @@ public class CoinBaseStreamingExchange extends BitstampExchange implements Strea
     public ExchangeSpecification getDefaultExchangeSpecification() {
         ExchangeSpecification spec = super.getDefaultExchangeSpecification();
         spec.setShouldLoadRemoteMetaData(false);
-
         return spec;
     }
 
