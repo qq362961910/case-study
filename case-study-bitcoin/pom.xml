@@ -14,9 +14,31 @@
 
     <properties>
         <exchange.version>5.0.2-SNAPSHOT</exchange.version>
+        <httpclient-version>4.5.11</httpclient-version>
+        <httpmime-version>4.5.11</httpmime-version>
+        <jackson-databind-version>2.10.3</jackson-databind-version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>cn.t</groupId>
+            <artifactId>http-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpmime-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind-version}</version>
+        </dependency>
         <dependency>
             <groupId>org.knowm.xchange</groupId>
             <artifactId>xchange-core</artifactId>

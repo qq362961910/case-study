@@ -1,5 +1,7 @@
 package com.jy.casestudy.bitcoin;
 
+import cn.t.util.http.HttpClientUtil;
+import cn.t.util.http.HttpResponseEntity;
 import com.jy.casestudy.bitcoin.coinbase.CoinBaseStreamingExchange;
 import info.bitrich.xchangestream.core.StreamingExchange;
 import info.bitrich.xchangestream.core.StreamingExchangeFactory;
@@ -16,6 +18,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * @author <a href="mailto:jian.yang@xman.com">研发部-用户中心组-杨建</a>
@@ -27,7 +33,13 @@ public class CoinBaseProCase {
     private static final Logger logger = LoggerFactory.getLogger(CoinBaseProCase.class);
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        httpGetData();
+        System.setProperty("java.net.useSystemProxies", "true");
+        System.setProperty("http.proxyHost", "127.0.0.1");
+        System.setProperty("http.proxyPort", "1080");
+        System.setProperty("socksProxyHost", "127.0.0.1");
+        System.setProperty("socksProxyPort", "1080");
+//        httpGetData();
+        HttpResponseEntity entity = HttpClientUtil.get("http://www.google.com");
         webSocketGetData();
     }
 
