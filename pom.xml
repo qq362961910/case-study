@@ -17,6 +17,7 @@
         <module>case-study-reactor</module>
         <module>case-study-jsch</module>
         <module>case-study-bitcoin</module>
+        <module>case-study-rxjava</module>
     </modules>
 
     <properties>
