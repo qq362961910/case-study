@@ -3,6 +3,7 @@ package com.jy.casestudy.rxjava;
 import io.reactivex.Observable;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -13,9 +14,6 @@ public class ObservableUtil {
 
     public static Observable<Character> flatStrToChar(String source) {
         char[] chars = source.toCharArray();
-        Arrays.stream(chars)
-        Character.
-
-        return Observable.fromArray(source.toCharArray());
+        return Observable.range(0, chars.length).map(i ->chars[i]);
     }
 }
