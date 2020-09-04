@@ -34,11 +34,13 @@ public class MapObservableTest {
 
     @Test
     public void flatMapVsFlatMapIte() {
+        //just封装的observable不修改数据结构
         Observable<List<String>> observable = Observable.just(
             Arrays.asList("1", "2", "3"),
             Arrays.asList("4", "5", "6"),
             Arrays.asList("7", "8", "9")
         );
+        //flatmap将每个元素封装成observable数据源
         Disposable disposable = observable
             .flatMap(Observable::fromIterable)
             .subscribe(ConsumerUtil.createOutputConsumer());
@@ -47,6 +49,7 @@ public class MapObservableTest {
         System.out.println("==========================================================");
 
         List<String> stringList = Arrays.asList("123","456", "789", "000");
+        //fromIterable封装的observable将修改list输出为单个元素
         Disposable disposableFlatMapIterable = Observable
             .fromIterable(stringList)
             .flatMapIterable(str -> Arrays.asList(str.split("")))
