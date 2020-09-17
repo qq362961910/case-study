@@ -25,7 +25,7 @@ public class ArrayBlockingQueueDemo {
 
         private static final Logger logger = LoggerFactory.getLogger(ArrayBlockingQueueProvider.class);
 
-        private ArrayBlockingQueue<String> arrayBlockingQueue;
+        private final ArrayBlockingQueue<String> arrayBlockingQueue;
 
         private ArrayBlockingQueueProvider(ArrayBlockingQueue<String> arrayBlockingQueue) {
             this.arrayBlockingQueue = arrayBlockingQueue;
