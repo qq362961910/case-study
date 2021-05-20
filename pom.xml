@@ -19,6 +19,7 @@
         <module>case-study-bitcoin</module>
         <module>case-study-rxjava</module>
         <module>case-study-jvm</module>
+        <module>case-study-dhcp</module>
     </modules>
 
     <properties>
