@@ -20,6 +20,7 @@
         <module>case-study-rxjava</module>
         <module>case-study-jvm</module>
         <module>case-study-dhcp</module>
+        <module>case-study-springscan</module>
     </modules>
 
     <properties>
