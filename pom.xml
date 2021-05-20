@@ -21,6 +21,7 @@
         <module>case-study-jvm</module>
         <module>case-study-dhcp</module>
         <module>case-study-springscan</module>
+        <module>case-study-weixin</module>
     </modules>
 
     <properties>
