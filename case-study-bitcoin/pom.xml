@@ -16,7 +16,7 @@
         <exchange.version>5.0.2-SNAPSHOT</exchange.version>
         <httpclient-version>4.5.11</httpclient-version>
         <httpmime-version>4.5.11</httpmime-version>
-        <jackson-databind-version>2.10.3</jackson-databind-version>
+        <jackson-databind-version>2.10.5.1</jackson-databind-version>
     </properties>
 
     <dependencies>
